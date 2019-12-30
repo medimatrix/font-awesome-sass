@@ -9,8 +9,6 @@ module FontAwesome
         elsif sprockets?
           register_sprockets
         end
-
-        configure_sass
       end
 
       # Paths
@@ -43,12 +41,6 @@ module FontAwesome
       end
 
       private
-
-      def configure_sass
-        require 'sass'
-
-        ::Sass.load_paths << stylesheets_path
-      end
 
       def register_compass_extension
         require 'font_awesome/sass/version'
